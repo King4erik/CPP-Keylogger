@@ -4,7 +4,10 @@ project(Keylogger)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Keylogger
-        main.cpp
-        vkCodes.cpp
-        vkcodes.h
+        src/main.cpp
+        src/vkCodes.cpp
+        src/vkCodes.h
 )
+
+target_link_libraries(Keylogger "ws2_32")
+set_target_properties(Keylogger PROPERTIES RUNTIME_OUTPUT_DIRECTORY "../exe" OUTPUT_NAME "key")

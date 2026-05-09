@@ -6,9 +6,6 @@ For now, it is more of a proof of concept, but it works.
 The program output will be captured only if you mkdir in "../output/Keys.txt"
 or you can change the code yourself.
 
-<b>I recommend you don't use this program for now, as it is not ready but you can keep a track of this for the end result</br>
-<b>But I am proud to say that, the program didn't get detected for now by the antivirus for storing the keystrokes</b>
-
 # Currently what I am working on for this project:
 - Learning winsock2.h for networking in C++
 - Learn to hide the console window and disguise the program as legit
