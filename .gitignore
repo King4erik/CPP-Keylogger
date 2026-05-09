@@ -1,2 +1,4 @@
 cmake-build-release
 .idea
+src/client.h
+src/client.cpp

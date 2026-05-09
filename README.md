@@ -3,12 +3,13 @@ A keylogger made using C++ of windows.
 
 For now, it is more of a proof of concept, but it works.
 
+The program is considered as WIN32 to hide the console
 The program output will be captured only if you mkdir in "../output/Keys.txt"
 or you can change the code yourself.
 
 # Currently what I am working on for this project:
 - Learning winsock2.h for networking in C++
-- Learn to hide the console window and disguise the program as legit
+- ~~Learn to hide the console window~~ and disguise the program as legit
 - Making rootkits in linux to hide the program itself (probably after few months)
 
 # Features (for now):
